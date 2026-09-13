@@ -138,3 +138,9 @@ The corrected `[37]` resolves the last blocker. Its exact target is the official
 Evidence: [AuthZEN Binding for OAuth 2.0 Token Exchange — Draft 1](https://openid.github.io/authzen/authzen-oauth-token-exchange-1_0.html), publisher OpenID Foundation/AuthZEN Working Group, published 2026-09-03, accessed 2026-09-13.
 
 **Final semantic citation gate: PASS. No remaining blockers.**
+
+## Russian-translation regression check — 2026-09-13
+
+**Verdict: PASS.**
+
+The Russian translation preserves the previously verified citation semantics, version/status pins, scope qualifications, inference labels, and compatibility conclusions. In particular, the corrected A2A and SLIM pins, MCP SDK/conformance distinction, COAZ-MCP incompatibility, UCP/AP2 asymmetry, CAEP attenuation semantics, x402 scope inference, and AuthZEN Token Exchange Draft 1 status remain materially unchanged. No translation-induced semantic or version/compatibility blocker was found.

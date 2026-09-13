@@ -40,3 +40,9 @@ If all recommendations are accepted, the 2,814-word report should shrink by a ne
 **PASS.** No remaining Critical/High structure or prose findings.
 
 Confirmed: C2 now has an explicit conditional hard-gate result; protocol-neutral evidence semantics are mandatory while SCITT/COSE is optional; AGNTCY is a required bounded comparison experiment rather than a C1 runtime component; invariant coverage and the scorecard now follow the method; the executive recommendation is materially shorter; and all four decision-critical terms are defined before use. The report now presents a clear decision, calibrated qualifications, consistent component status and an auditable path into Gate 1.
+
+## Финальная проверка русской версии — 2026-09-13
+
+**PASS.** Блокирующих замечаний по структуре или ясности нет; смысловых искажений принятой рекомендации C1/C2 не обнаружено.
+
+Русская версия сохраняет decision-first структуру, статус C1 как Primary C, условное прохождение C2 только по критерию независимой реализуемости, обязательность нейтральной к протоколу семантики доказательств при необязательности SCITT/COSE как носителя и статус AGNTCY как обязательного ограниченного сравнительного эксперимента, а не зависимости исполнения. Термины, определяющие решение, объяснены до таблиц; диапазоны оценок и ограничения уверенности сформулированы понятно для неинженерного читателя.
