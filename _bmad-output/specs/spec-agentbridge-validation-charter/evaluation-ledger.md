@@ -1,6 +1,6 @@
 # Evaluation Invariant Ledger — proposal for OQ-2
 
-Статус: **independent blind review PASS; Project Owner re-acceptance pending; not frozen**.
+Статус: **OQ-2A frozen by Project Owner on 2026-09-13**. OQ-2B не заморожен.
 
 Ledger определяет результаты, которые обязано сохранять любое решение — Native или Composition. Он намеренно описывает **что должно быть истинно**, а не названия сообщений, классов, форматов или технологий. Названия будущих объектов Candidate N не могут служить доказательством необходимости Native Core.
 
@@ -45,7 +45,7 @@ Ledger определяет результаты, которые обязано 
 
 ## OQ-2 split
 
-- **OQ-2A — Ledger:** Project Owner принял исходные EI-01–EI-24; blind review потребовал материальных исправлений и добавления EI-25. Исправленный EI-01–EI-25 прошёл повторный независимый review с 0 Critical/High и требует осознанного re-acceptance до freeze.
+- **OQ-2A — Ledger:** EI-01–EI-25 прошли независимый blind review с 0 Critical/High и осознанно повторно приняты Project Owner. Ledger frozen; любое смысловое изменение снимает freeze и требует нового review и owner acceptance.
 - **OQ-2B — Native allocation:** после freeze Ledger и oracle распределить каждый FR/NFR, сформировать proposed Core semantics и провести Removal Tests. До этого Candidate N design остаётся заблокированным.
 
 ## Acceptance criteria for OQ-2A
@@ -56,3 +56,11 @@ Ledger определяет результаты, которые обязано 
 - Каждый EI применим минимум к двум несвязанным доменам либо явно ограничивает свой claim.
 - Независимый reviewer не получает Candidate N object model до выдачи замечаний.
 - Project Owner получает простое объяснение групп и осознанно принимает либо изменяет финальную проверенную редакцию.
+
+## Freeze record
+
+- **Frozen scope:** точные формулировки EI-01–EI-25 в этом файле.
+- **Authority/date:** Project Owner, 2026-09-13.
+- **Independent review:** PASS; Critical 0, High 0.
+- **Change control:** редакционные правки без изменения смысла допустимы с audit note; любое изменение гарантии, pass condition, falsifier, claim boundary или PRD rationale немедленно возвращает OQ-2A в `open` до повторного blind review и принятия Project Owner.
+- **Не разрешено этим freeze:** OQ-2B allocation, Candidate N object model, oracle/corpus, экспериментальный или production code.

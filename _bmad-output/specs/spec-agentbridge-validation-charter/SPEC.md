@@ -71,6 +71,7 @@ AgentBridge претендует на самостоятельный, role-neutr
 ## Constraints
 
 - Финальный PRD имеет приоритет; Charter может уточнять процедуру, но не ослаблять FR, NFR, hard gates, No Start или scope.
+- Candidate-neutral Ledger EI-01–EI-25 frozen Project Owner 2026-09-13 после blind review с 0 Critical/High; смысловое изменение автоматически снимает freeze до повторного review и принятия.
 - Native Core проектируется полноценно; существующие стандарты являются сильнейшими альтернативами и необязательными bridges, а не автоматически обязательными runtime-зависимостями.
 - Описательное сравнение не может окончательно остановить Native-гипотезу. Требуется воспроизводимое executable/model evidence и работающий proof of concept решающих инвариантов.
 - `native` нельзя выбрать раньше полного Gate 1A–1D. Окончательные `profile` или `upstream` требуют независимой реализации выбранной C-семантики.
@@ -100,7 +101,6 @@ AgentBridge претендует на самостоятельный, role-neutr
 ## Open Questions
 
 - **OQ-1:** Какие точные версии и конфигурации войдут в Composition Challenger Set после freshness-проверки?
-- **OQ-2A:** Исправленный Ledger EI-01–EI-25 прошёл независимую проверку с 0 Critical/High; примет ли Project Owner финальную редакцию, чтобы её можно было заморозить?
 - **OQ-2B:** Какие требования после freeze Ledger и oracle действительно требуют Native Core, а какие должны остаться в Profile, Binding/Bridge, conformance или более поздних слоях?
 - **OQ-3:** Какие vectors, datasets, expected outcomes, observers и holdout rules образуют corpus VC-1–VC-13?
 - **OQ-4:** Какие severity rules, Safety Blocking Classes и residual-risk limits утвердить?

@@ -1,6 +1,6 @@
 # Independent blind review — Evaluation Invariant Ledger
 
-Статус: **PASS; Project Owner re-acceptance pending**.
+Статус: **PASS; Project Owner re-accepted; OQ-2A frozen 2026-09-13**.
 
 ## Scope and blindness
 
@@ -18,4 +18,4 @@
 
 ## Final verdict
 
-Исправлены publication lifecycle, independence при нескольких approvals, conflicting claims, replay/revocation/effect boundaries, causal evidence, privacy/data lifecycle, bridge loss/mapping, conformance coverage и воспроизводимость, open-standard rights и bounded threat-model scope. Новых Critical/High не найдено. Ledger не считается frozen до явного повторного принятия Project Owner.
+Исправлены publication lifecycle, independence при нескольких approvals, conflicting claims, replay/revocation/effect boundaries, causal evidence, privacy/data lifecycle, bridge loss/mapping, conformance coverage и воспроизводимость, open-standard rights и bounded threat-model scope. Новых Critical/High не найдено. Project Owner повторно принял финальную редакцию; OQ-2A frozen 2026-09-13.
