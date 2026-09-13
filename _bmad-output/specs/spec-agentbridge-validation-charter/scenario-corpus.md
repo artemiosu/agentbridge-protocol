@@ -1,6 +1,6 @@
-# Scenario grammar and public corpus plan — OQ-3A proposal
+# Scenario grammar and shared corpus plan — OQ-3A revised proposal
 
-Статус: **proposal-ready; templates only; exact OQ-3B corpus not generated**.
+Статус: **blind re-review PASS; awaiting Project Owner re-acceptance; exact OQ-3B corpus not generated**.
 
 Этот документ фиксирует общую форму испытаний до candidate design. Он использует абстрактные сущности и логическое время, поэтому ни один wire format, transport, язык или Candidate object model не получает преимущества.
 
@@ -69,7 +69,7 @@
 
 ### DS-6 — Fault and adversary operators
 
-`DROP`, `DUPLICATE`, `REORDER`, `DELAY`, `PARTITION`, `CRASH`, `RESTART`, `STALE`, `REVOKE`, `MUTATE`, `ALIAS`, `SPLICE`, `DOWNGRADE`, `BRIDGE_LOSS`, `OBSERVER_DROP`, `EGRESS_ATTEMPT`, `SLOW_CONSUMER`, `RESOURCE_EXHAUST`, `CONFLICT_CLAIM`.
+`DROP`, `DUPLICATE`, `REORDER`, `DELAY`, `PARTITION`, `CRASH`, `RESTART`, `STALE`, `REVOKE`, `MUTATE`, `ALIAS`, `SPLICE`, `DOWNGRADE`, `BRIDGE_LOSS`, `OBSERVER_DROP`, `OBSERVER_COMMON_MODE`, `EGRESS_ATTEMPT`, `SLOW_CONSUMER`, `RESOURCE_EXHAUST`, `CONFLICT_CLAIM`, `CONTROLLER_COMPROMISE`, `CREDENTIAL_COMPROMISE`, `PARTICIPANT_COMPROMISE`, `INTERMEDIARY_COMPROMISE`, `COLLUSION`, `ENUMERATE`, `FALSE_PROVENANCE`, `NUMERIC_AMBIGUITY`, `UNICODE_AMBIGUITY`, `CANONICALIZATION_SPLIT`, `COMPRESS_BOMB`, `PARSER_DEPTH`, `EARLY_DATA_REPLAY`, `FALLBACK_WEAKEN`, `OPTIONAL_DEPENDENCY_REMOVE`, `NEW_THREAT`.
 
 Каждый operator имеет logical insertion point и не меняет другие параметры, кроме явно перечисленных.
 
@@ -77,7 +77,7 @@
 
 Каждый exact vector OQ-3B обязан заполнить:
 
-1. `vector_id/version/classification` (`confirmatory-public`, `confirmatory-holdout`, `exploratory`);
+1. `vector_id/version/classification` (`confirmatory-shared`, `confirmatory-holdout`, `exploratory`);
 2. `VC`, EI/FR/NFR и MP links;
 3. dataset records и dynamic role assignments;
 4. candidate-neutral initial state и claim boundary;
@@ -87,14 +87,14 @@
 8. forbidden tuples, disclosures, effects и transitions;
 9. OBS sources, detection window, correlation и completeness condition;
 10. privacy/resource bounds и safe-stop;
-11. applicability/exclusion rationale для каждого кандидата;
+11. общую frozen applicability predicate; candidate-elected limitation записывается как результат и не создаёт исключение;
 12. expected evidence artifacts, authorship/cross-check и content digest.
 
 Пустое обязательное поле делает vector непригодным для confirmatory corpus.
 
-## 3. Public template matrix
+## 3. Shared-confirmatory template matrix
 
-Для каждой семьи фиксируются пять обязательных archetypes. Это 65 template cells; OQ-3B создаёт минимум один exact vector на cell и дополнительные cases для каждого уникального failure mechanism.
+Для каждой семьи фиксируются пять обязательных archetypes. Это 65 template cells; OQ-3B создаёт минимум один exact vector на cell и дополнительные cases до полного покрытия `atomic-coverage-inventory.md`. `Shared` означает одинаковый приватный доступ обеих команд Gate 1; публикация требует отдельного разрешения Project Owner.
 
 | VC | `P01` positive | `N01` boundary-negative | `F01` failure/concurrency | `A01` adversarial | `M01` metamorphic |
 | --- | --- | --- | --- | --- | --- |
@@ -110,7 +110,7 @@
 | VC-10 | Staged compatible upgrade → same allowed set | Unknown mandatory/collision → incompatible | Mixed-version branch remains scoped | Silent default/downgrade → block | Weaker version never improves result (MP-07/12) |
 | VC-11 | Lossless scoped mapping preserves safety projection | Critical loss → dependent action blocked | Upstream drift invalidates only mapped claim | Loop/impersonation/assurance inflation → fail | Extra bridge hop cannot hide loss (MP-13/18) |
 | VC-12 | Compound safe case remains within all bounds | One blocking mutation dominates otherwise valid flow | Partition+crash+retry → no duplicate/shared-limit breach | Egress/observer/leakage attack → candidate fail or run invalid by observer rule | Added fault never improves permission/certainty (MP-06/14/15) |
-| VC-13 | `D-A` and `D-B` comparable under explicit Profile | `D-C` remains incomparable; `D-PRIVATE` undisclosed | Provider partial/timeout → partial/unknown, no invented value | Hidden pair mapping or provenance mutation → bounded claim/fail | Domain relabel and public mapping obey MP-17/18 |
+| VC-13 | `D-A` and `D-B` comparable under explicit Profile | `D-C` remains incomparable; `D-PRIVATE` undisclosed | Provider partial/timeout → partial/unknown, no invented value | Hidden pair mapping or provenance mutation → bounded claim/fail | Domain relabel and equally available mapping obey MP-17/18 |
 
 ## 4. Expected-outcome derivation order
 
@@ -128,15 +128,19 @@
 
 Более поздний шаг не может превратить запрещённый результат раннего шага в pass.
 
-## 5. OQ-3B generation obligations
+## 5. OQ-3B information barrier and generation obligations
 
-До экспериментального кода:
+OQ-2B, Candidate design и код запрещены, пока OQ-4/OQ-5/OQ-8 не заполнят заранее типизированные parameter slots и полный OQ-3B manifest не будет атомарно preregistered. Все степени свободы выбора cases, schedules, bounds, outcomes и observers фиксируются до Candidate design. Более позднее создание OQ-3B после начала Candidate work не допускается; нарушение барьера аннулирует confirmatory use и требует нового независимого процесса.
 
-- каждая из 65 cells получает exact public confirmatory vector;
-- каждый отдельный failure mechanism из EI falsifiers получает хотя бы один exact negative vector;
+До OQ-2B, Candidate design и экспериментального кода:
+
+- каждая из 65 cells получает exact shared-confirmatory vector;
+- каждый AC atom и отдельный failure mechanism получает требуемые coverage types по inventory;
 - каждый security-critical vector имеет независимо выведенный либо blind cross-checked expected outcome;
 - domain/topology/mode exclusions имеют rationale и сужают claim;
 - concrete resource limits приходят только из frozen OQ-5;
 - manifests, storage и sealed holdout создаются только после OQ-8 controls.
+
+Shared-confirmatory exact vectors и independently checked outcomes после preregistration одинаково доступны будущим implementers; sealed holdout остаётся скрытым. Авторы и reviewers OQ-3B не могут видеть Candidate design, поскольку его создание ещё запрещено.
 
 Число `65` — минимальный coverage floor, не целевой максимум и не основание объединять различные failure mechanisms в один непроверяемый mega-case.

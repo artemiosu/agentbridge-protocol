@@ -139,7 +139,7 @@ Gate Chair применяет decision lattice из `measurement-and-decision.md
 | --- | --- | --- |
 | Ledger и allocation полны | Gate Chair | open |
 | Candidates и версии заморожены | Gate Chair + Challenger/Native Advocates | open |
-| OQ-3A Oracle/schema/scenario/observer/holdout rules заморожены до candidate design | Conformance Lead + Security Reviewer | open |
+| OQ-3A verdict/inventory/schema/scenario/observer/holdout rules заморожены до Candidate design | Conformance Lead + Security Reviewer | blind re-review PASS; awaiting owner re-acceptance |
 | OQ-3B exact corpus/calibration/sealed holdout заморожены до кода | Conformance Lead + Evidence Custodian | open |
 | Safety и observer model приняты | Security Reviewer | open |
 | Metrics/SAP/budgets приняты | Gate Chair + Project Owner | open |
