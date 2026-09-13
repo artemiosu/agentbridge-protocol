@@ -1,0 +1,19 @@
+{
+  "claims": [
+    {
+      "claim": "Selected component version and cross-version compatibility baseline",
+      "class": "versions/compatibility",
+      "pub_date": "2026-09-13"
+    },
+    {
+      "claim": "Fast-moving protocol landscape and candidate status",
+      "class": "landscape",
+      "pub_date": "2026-09-13"
+    },
+    {
+      "claim": "Ecosystem maturity, implementation and adoption evidence",
+      "class": "ecosystem",
+      "pub_date": "2026-09-13"
+    }
+  ]
+}
