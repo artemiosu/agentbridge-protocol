@@ -1,0 +1,13 @@
+# Keep text files consistent across operating systems.
+* text=auto eol=lf
+
+# Never apply text conversion to binary artifacts.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.pdf binary
+*.docx binary
+*.pptx binary
+*.xlsx binary

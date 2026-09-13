@@ -1,0 +1,39 @@
+{
+  "claims": [
+    {
+      "claim": "MCP current core, authorization and Tasks maturity/status were checked as served",
+      "class": "version/compatibility",
+      "pub_date": "2026-09-11"
+    },
+    {
+      "claim": "A2A current specification, patch release and extension/TCK status were checked as served",
+      "class": "version/compatibility",
+      "pub_date": "2026-09-11"
+    },
+    {
+      "claim": "OpenAPI and Arazzo current publication lines were checked as served",
+      "class": "version/compatibility",
+      "pub_date": "2026-09-11"
+    },
+    {
+      "claim": "UCP, ACP, AP2 and x402 current releases and maturity were checked as served",
+      "class": "version/compatibility",
+      "pub_date": "2026-09-11"
+    },
+    {
+      "claim": "AuthZEN and IETF agent authorization/receipt work status was checked as served",
+      "class": "version/compatibility",
+      "pub_date": "2026-09-11"
+    },
+    {
+      "claim": "No stable general cross-protocol authorization-to-effect profile was found in the bounded official-source search",
+      "class": "scope",
+      "pub_date": "2026-09-11"
+    },
+    {
+      "claim": "Extension governance and public adoption/conformance evidence were checked across MCP, A2A, UCP, OpenAPI and FIDO",
+      "class": "ecosystem",
+      "pub_date": "2026-09-11"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+# Private local strategy and source materials
+/.agentbridge-private/
+/ПРОМПТ ДЛЯ CODEX - CHATGPT.md
+/ПОШАГОВЫЙ АЛГОРИТМ ДЕЙСТВИЙ (ОТ $0 ДО ТРИЛЛИОНА).md
+
+# Private BMAD audit/source-extraction records; final planning artifacts may be tracked
+/_bmad-output/**/.memlog.md
+/_bmad-output/**/reconcile-private-*.md
+
+# Local secrets and machine-specific files
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.DS_Store
+Thumbs.db
+
+# Local editor, cache, log and temporary files
+.idea/
+.vscode/
+*.log
+*.tmp
+*.swp
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+node_modules/

@@ -1,0 +1,27 @@
+[
+  {
+    "claim": "Current versions and compatibility boundaries of MCP, A2A, OpenAPI/Arazzo, UCP, both ACP initiatives, and AP2",
+    "class": "version-compatibility",
+    "pub_date": "2026-09-12"
+  },
+  {
+    "claim": "Current conformance and security issue reports",
+    "class": "protocol-failure",
+    "pub_date": "2026-09-12"
+  },
+  {
+    "claim": "Current status of agentproto, AIPF, agentic overlay, and DAWN",
+    "class": "ai-landscape",
+    "pub_date": "2026-09-12"
+  },
+  {
+    "claim": "Current governance and ecosystem status",
+    "class": "ecosystem",
+    "pub_date": "2026-09-12"
+  },
+  {
+    "claim": "Encoding and runtime benchmark leads used only to define the benchmark matrix",
+    "class": "benchmark-evidence",
+    "pub_date": "2026-09-12"
+  }
+]

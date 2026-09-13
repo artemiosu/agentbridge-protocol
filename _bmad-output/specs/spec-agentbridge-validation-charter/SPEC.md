@@ -1,0 +1,110 @@
+---
+id: SPEC-agentbridge-validation-charter
+status: draft-no-start
+created: 2026-09-13
+updated: 2026-09-13
+companions:
+  - validation-charter.md
+  - evaluation-ledger.md
+  - requirement-allocation.md
+  - candidate-manifests.md
+  - experiment-matrix.md
+  - measurement-and-decision.md
+  - roles-evidence-and-governance.md
+  - open-decisions.md
+  - review-evaluation-ledger.md
+  - ../../planning-artifacts/prds/prd-agent-bridge-sdk-2026-09-12/prd.md
+  - ../../planning-artifacts/research/technical-clean-slate-agentbridge-protocol-archite-2026-09-12/research.md
+sources: []
+---
+
+> **Канонический контракт.** Этот SPEC и все файлы в `companions:` образуют полный контракт подготовки Gate 1. Пока статус `draft-no-start`, экспериментальный код начинать нельзя.
+
+# AgentBridge Gate 1 Validation Charter
+
+## Why
+
+AgentBridge претендует на самостоятельный, role-neutral протокольный Core для будущего агентного интернета. Публичное техническое исследование выявило вероятный незакрытый разрыв между существующими инициативами, но дало только среднюю уверенность. Нужен заранее зафиксированный и воспроизводимый эксперимент, который честно проверит, оправдан ли Native Core, либо ту же ценность безопаснее получить через профиль существующих стандартов, изменение одного upstream-проекта или отказ от отдельного Core.
+
+## Capabilities
+
+- **CAP-1 — Независимая основа сравнения**
+  - **intent:** Команда фиксирует candidate-neutral Evaluation Invariant Ledger и распределяет каждое обязательное FR/NFR до проектирования кандидатов.
+  - **success:** Каждый инвариант имеет независимое основание, наблюдаемый результат и границу claim; не остаётся ни одного нераспределённого FR/NFR.
+
+- **CAP-2 — Сильнейшие честные альтернативы**
+  - **intent:** Команда формирует актуальный Composition Challenger Set по заранее установленным правилам поиска и отбора.
+  - **success:** Выбраны одна–три Pareto-недоминируемые, реально разворачиваемые конфигурации с точными версиями, полным glue inventory и обоснованием Primary C.
+
+- **CAP-3 — Полноценная Native-гипотеза**
+  - **intent:** Команда описывает внутренне целостный Native Candidate для всех доказанно общих инвариантов без искусственного ограничения его размера.
+  - **success:** Каждый предложенный Core-элемент имеет allocation и проходит Removal Test; доменная и инфраструктурная семантика не попадает в Core без необходимости.
+
+- **CAP-4 — Неподстроенные тесты**
+  - **intent:** Команда фиксирует oracle, сценарии, expected outcomes и sealed holdout до candidate-specific design.
+  - **success:** Все критические outcomes независимо выведены или перепроверены вслепую; изменение oracle аннулирует затронутый confirmatory result и требует новой preregistration.
+
+- **CAP-5 — Безопасный эксперимент**
+  - **intent:** Команда проверяет consequential semantics только в изолированной синтетической среде с полным наблюдением эффектов.
+  - **success:** Нет реальных платежей, бронирований, юридических обязательств, production credentials/data или неучтённого egress; слепота observer всегда даёт invalid, а не pass.
+
+- **CAP-6 — Независимая реализуемость**
+  - **intent:** Независимые implementers реализуют frozen semantics без общей protocol-semantic codebase и закрытых пояснений.
+  - **success:** Для каждого кандидата, требующего финальной проверки, две независимые реализации достигают 100% allowed-set и safety-projection agreement при нуле Safety Blocking Findings.
+
+- **CAP-7 — Честные измерения**
+  - **intent:** Команда раздельно измеряет внутреннюю сложность протокольной модели и практическую стоимость с лучшими существующими инструментами.
+  - **success:** Preregistered estimands, одинаковые assurance/scope, common-substrate и best-deployable планы дают воспроизводимые результаты с заранее установленными uncertainty и non-inferiority rules.
+
+- **CAP-8 — Экспертный совет до кода**
+  - **intent:** Независимые экспертные перспективы оценивают аналитическую часть и объясняют владельцу проекта, стоит ли оплачивать практический эксперимент.
+  - **success:** До кода создан Expert Advisory Record с рекомендацией `proceed`, `revise-research` или `pause-stop`, доказательствами, неопределённостью и dissent; окончательное решение остаётся за Project Owner.
+
+- **CAP-9 — Детерминированное решение**
+  - **intent:** Gate Chair применяет заранее зафиксированную последовательность `validity → eligibility → existing-surface → native → no viable direction`.
+  - **success:** Gate 1 выдаёт ровно одно направление `native`, `profile`, `upstream` или `stop`, либо `Gate Closed / No Decision`; средний балл не компенсирует hard-gate failure.
+
+- **CAP-10 — Проверяемая история доказательств**
+  - **intent:** Команда сохраняет точные входы, реализации, запуски, отрицательные результаты и решения так, чтобы независимая сторона могла повторить вывод.
+  - **success:** Evidence package имеет immutable manifests/digests, provenance, raw results и append-only index; публикация происходит только по отдельному разрешению Project Owner.
+
+## Constraints
+
+- Финальный PRD имеет приоритет; Charter может уточнять процедуру, но не ослаблять FR, NFR, hard gates, No Start или scope.
+- Native Core проектируется полноценно; существующие стандарты являются сильнейшими альтернативами и необязательными bridges, а не автоматически обязательными runtime-зависимостями.
+- Описательное сравнение не может окончательно остановить Native-гипотезу. Требуется воспроизводимое executable/model evidence и работающий proof of concept решающих инвариантов.
+- `native` нельзя выбрать раньше полного Gate 1A–1D. Окончательные `profile` или `upstream` требуют независимой реализации выбранной C-семантики.
+- Rust, Go, Python, TypeScript, transport, encoding, cryptography provider, cloud и repository layout остаются переменными эксперимента, а не решениями Charter.
+- Все consequential actions выполняются только в sandbox/simulator; production effects, credentials и customer data запрещены.
+- Приватные исходные документы не входят в evidence package, Git или публичные материалы.
+- Любой незаполненный обязательный параметр OQ-1–OQ-8 сохраняет `draft-no-start`.
+
+## Non-goals
+
+- Не создавать production-спецификацию AgentBridge, SDK, Architecture, cloud, registry, marketplace, payments или advertising.
+- Не доказывать рыночный спрос, статус индустриального стандарта, финансовые прогнозы или будущую оценку компании.
+- Не выбирать победителя по эстетике архитектуры, числу внешних протоколов, популярности, stars/downloads или предпочтению языка.
+- Не изобретать собственную криптографию, глобальный identity provider, policy engine, payment rail или отраслевую систему истины.
+- Не публиковать Charter, evidence или производные документы без отдельного разрешения владельца проекта.
+
+## Success signal
+
+Подготовительный этап завершён, когда все OQ-1–OQ-8 закрыты, каждый FR/NFR распределён, кандидаты и oracle заморожены до их реализации, независимые роли назначены, safety/evidence проверки пройдены и Project Owner осознанно меняет статус Charter на `frozen`. Успех самого Gate 1 — воспроизводимое обоснованное направление, даже если результатом станет не Native Core.
+
+## Assumptions
+
+- Gate 0 research от 2026-09-12 считается достаточно свежим для первого draft; перед freeze и каждым зачётным rerun применяется максимум 30 дней либо более строгое обоснованное окно.
+- На первом этапе допустимо разделять конфликтующие функции независимыми fresh-context review, но это ограничивает claim и не заменяет внешнюю организационную независимость Gate 3.
+- Точные числовые пороги Material Advantage, ресурсы и состав команды ещё не утверждены.
+
+## Open Questions
+
+- **OQ-1:** Какие точные версии и конфигурации войдут в Composition Challenger Set после freshness-проверки?
+- **OQ-2A:** Исправленный Ledger EI-01–EI-25 прошёл независимую проверку с 0 Critical/High; примет ли Project Owner финальную редакцию, чтобы её можно было заморозить?
+- **OQ-2B:** Какие требования после freeze Ledger и oracle действительно требуют Native Core, а какие должны остаться в Profile, Binding/Bridge, conformance или более поздних слоях?
+- **OQ-3:** Какие vectors, datasets, expected outcomes, observers и holdout rules образуют corpus VC-1–VC-13?
+- **OQ-4:** Какие severity rules, Safety Blocking Classes и residual-risk limits утвердить?
+- **OQ-5:** Какие runtimes, bindings, environments, thresholds, confidence и non-inferiority margins использовать?
+- **OQ-6:** Кто займёт независимые роли и как будет предотвращено взаимное влияние реализаций?
+- **OQ-7:** Какой бюджет времени, вычислений и инфраструктуры допустим без ослабления hard gates?
+- **OQ-8:** Какие dependency licenses, правила хранения, IP checks и publication boundaries обязательны?
