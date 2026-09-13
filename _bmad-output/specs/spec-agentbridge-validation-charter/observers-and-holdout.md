@@ -1,6 +1,6 @@
 # Observer, sandbox and sealed holdout contract — OQ-3A proposal
 
-Статус: **blind re-review PASS; awaiting Project Owner re-acceptance; not frozen**.
+Статус: **OQ-3A frozen by Project Owner on 2026-09-13; OQ-3B not frozen**.
 
 ## 1. Observer catalog
 

@@ -1,6 +1,6 @@
 # Atomic coverage inventory — OQ-3A revised proposal
 
-Статус: **blind re-review PASS; awaiting Project Owner re-acceptance; not frozen**.
+Статус: **OQ-3A frozen by Project Owner on 2026-09-13; OQ-3B closure evidence pending**.
 
 Этот inventory раскладывает frozen EI-01–EI-25 на неделимые проверяемые обязательства. ID стабилен: `AC-EIxx-Pn` — обязательный положительный результат, `AC-EIxx-Nn` — отдельный falsifier. OQ-3B обязан связать каждый применимый atom с exact vector и evidence либо с заранее принятой candidate-neutral причиной исключения, сужающей общий claim.
 

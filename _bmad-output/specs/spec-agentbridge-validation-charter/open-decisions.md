@@ -5,7 +5,7 @@
 | Порядок | ID | Что решаем простыми словами | Почему это важно | Рекомендуемый следующий шаг | Owner | Статус |
 | ---: | --- | --- | --- | --- | --- | --- |
 | 1 | OQ-2A | Какие общие правила обязан сохранять любой вариант | Без этого тест можно незаметно подстроить под придуманную архитектуру | EI-01–EI-25 прошли blind review и повторно приняты Project Owner; любое смысловое изменение требует нового review | Gate Chair | **frozen 2026-09-13** |
-| 2 | OQ-3A | По каким заранее известным правилам строить и оценивать испытания | Иначе правильный ответ можно подобрать после просмотра кандидата | Все 12 findings закрыты, blind re-review PASS (0 Critical/High); требуется повторное осознанное принятие Project Owner | Conformance Lead + Security Reviewer | awaiting owner re-acceptance |
+| 2 | OQ-3A | По каким заранее известным правилам строить и оценивать испытания | Иначе правильный ответ можно подобрать после просмотра кандидата | Все 12 findings закрыты, blind re-review PASS (0 Critical/High), исправленная редакция повторно принята Project Owner | Conformance Lead + Security Reviewer | **frozen 2026-09-13** |
 | 3 | OQ-1 | С какими сильнейшими существующими решениями честно сравнивать Native | Слабый соперник даст ложную победу Native | Обновить публичные первичные источники и по selection protocol заморозить 1–3 C и Primary C | Challenger Advocate + Gate Chair | open |
 | 4 | OQ-4 | Какие ошибки автоматически запрещают положительный результат | Иначе опасную ошибку можно назвать «средней» и проигнорировать | Утвердить immutable Safety Blocking Class, observer rules и residual-risk process | Security Reviewer + Project Owner | open |
 | 5 | OQ-5 | Что означает «практически лучше» и в каких условиях измерять | Без порогов победителя можно выбрать после просмотра цифр | Утвердить primary/secondary endpoints, два cost estimands, environments, margins и SAP | Gate Chair + Project Owner | open |
@@ -25,4 +25,4 @@
 6. Провести Expert Advisory Checkpoint и объяснить рекомендацию Project Owner простым языком.
 7. Только после осознанного `proceed` и полного freeze разрешить экспериментальный код.
 
-OQ-2A frozen. Исправленная OQ-3A закрыла все 12 findings и прошла blind re-review с 0 Critical/High; она содержит total verdict, atomic coverage inventory, 24 metamorphic properties, synthetic grammar, 12 observer contracts и усиленное правило 39-case sealed holdout. До повторного принятия Project Owner OQ-3A не frozen. Exact corpus остаётся OQ-3B; Allocation Matrix — гипотезой до OQ-2B.
+OQ-2A и OQ-3A frozen. Исправленная OQ-3A закрыла все 12 findings, прошла blind re-review с 0 Critical/High и повторно принята Project Owner. Она содержит total verdict, atomic coverage inventory, 24 metamorphic properties, synthetic grammar, 12 observer contracts и усиленное правило 39-case sealed holdout. Exact corpus остаётся OQ-3B; Allocation Matrix — гипотезой до OQ-2B.

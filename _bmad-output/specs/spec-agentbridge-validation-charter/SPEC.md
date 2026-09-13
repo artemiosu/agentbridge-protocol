@@ -13,6 +13,7 @@ companions:
   - atomic-coverage-inventory.md
   - scenario-corpus.md
   - observers-and-holdout.md
+  - oq3-freeze-manifest.md
   - measurement-and-decision.md
   - roles-evidence-and-governance.md
   - open-decisions.md

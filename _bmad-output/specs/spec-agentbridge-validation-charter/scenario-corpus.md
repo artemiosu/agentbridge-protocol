@@ -1,6 +1,6 @@
 # Scenario grammar and shared corpus plan — OQ-3A revised proposal
 
-Статус: **blind re-review PASS; awaiting Project Owner re-acceptance; exact OQ-3B corpus not generated**.
+Статус: **OQ-3A grammar/templates frozen by Project Owner on 2026-09-13; exact OQ-3B corpus not generated**.
 
 Этот документ фиксирует общую форму испытаний до candidate design. Он использует абстрактные сущности и логическое время, поэтому ни один wire format, transport, язык или Candidate object model не получает преимущества.
 

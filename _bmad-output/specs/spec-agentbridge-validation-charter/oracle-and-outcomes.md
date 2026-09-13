@@ -1,6 +1,6 @@
 # Candidate-neutral oracle and outcome contract — OQ-3A proposal
 
-Статус: **blind re-review PASS; awaiting Project Owner re-acceptance; not frozen**.
+Статус: **OQ-3A frozen by Project Owner on 2026-09-13; OQ-3B not frozen**.
 
 Oracle определяет допустимый смысл результата до появления моделей Candidate N/C. Он не задаёт названия сообщений, wire format, язык, transport, SDK API или внутреннюю архитектуру.
 
