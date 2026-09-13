@@ -40,7 +40,7 @@ Gate 1 отвечает на один вопрос:
 - Oracle schema, metamorphic properties, scenario templates и holdout-generation rule заморожены до candidate-specific design.
 - Security-critical expected outcomes независимо выведены или blind cross-checked.
 - Candidate N и Composition Challenger Set имеют immutable manifests; весь custom glue раскрыт.
-- Safety Blocking Class, observer coverage и sandbox/egress controls приняты Security Reviewer.
+- Safety Blocking Class из `safety-blocking-and-risk.md`, observer coverage и sandbox/egress controls приняты Security Reviewer и Project Owner.
 - Primary endpoint, secondary endpoints, thresholds, margins, uncertainty zone и Statistical Analysis Plan утверждены до раскрытия comparative results.
 - Роли, конфликты, genealogy/exposure rules и correction budget утверждены.
 - Dependencies/IP/storage/publication boundaries проверены.
@@ -102,7 +102,7 @@ Gate Chair применяет decision lattice из `measurement-and-decision.md
 
 ## 5. Неослабляемые hard gates
 
-- Ноль Safety Blocking Findings.
+- Ноль Safety Blocking Findings по SBC-01–SBC-10; severity, performance, cost и aggregate score не отменяют этот запрет.
 - Ноль запрещённых consequential effects и protected disclosures при подтверждённой полноте observation.
 - 100% agreement по allowed-set и safety projection для independent implementations.
 - Неизвестный, частичный, denied и incompatible outcome не превращаются в success.
@@ -142,7 +142,8 @@ Gate Chair применяет decision lattice из `measurement-and-decision.md
 | Executable Candidate manifests, dependency closures и implementation pins заморожены до design/code | Gate Chair + Challenger/Native Advocates | open; blocked by OQ-3B/OQ-8 |
 | OQ-3A verdict/inventory/schema/scenario/observer/holdout rules заморожены до Candidate design | Conformance Lead + Security Reviewer | **frozen 2026-09-13; blind review PASS 0 Critical/High** |
 | OQ-3B exact corpus/calibration/sealed holdout заморожены до кода | Conformance Lead + Evidence Custodian | open |
-| Safety и observer model приняты | Security Reviewer | open |
+| Safety Blocking Class и residual-risk model приняты | Security Reviewer + Project Owner | **OQ-4 frozen 2026-09-13** |
+| Exact observer/sandbox model принят | Security Reviewer | open / OQ-3B, OQ-5, OQ-8 |
 | Metrics/SAP/budgets приняты | Gate Chair + Project Owner | open |
 | Independence/genealogy приняты | Gate Chair | open |
 | IP/storage/publication проверены | Evidence Custodian + Project Owner | open |
