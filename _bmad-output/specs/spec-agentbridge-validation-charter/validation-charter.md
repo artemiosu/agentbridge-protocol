@@ -144,6 +144,8 @@ Gate Chair применяет decision lattice из `measurement-and-decision.md
 | OQ-3B exact corpus/calibration/sealed holdout заморожены до кода | Conformance Lead + Evidence Custodian | open |
 | Safety Blocking Class и residual-risk model приняты | Security Reviewer + Project Owner | **OQ-4 frozen 2026-09-13** |
 | Exact observer/sandbox model принят | Security Reviewer | open / OQ-3B, OQ-5, OQ-8 |
+| OQ-5A measurement policy принята | Methodology + Fairness + Security Reviewers; Project Owner | **frozen 2026-09-13** |
+| OQ-5B exact N/τ, teams, budgets, cells и schedules заморожены | Gate Chair + Project Owner | blocked by OQ-6/OQ-7/neutral pilot |
 | Metrics/SAP/budgets приняты | Gate Chair + Project Owner | open |
 | Independence/genealogy приняты | Gate Chair | open |
 | IP/storage/publication проверены | Evidence Custodian + Project Owner | open |

@@ -8,7 +8,8 @@
 | 2 | OQ-3A | По каким заранее известным правилам строить и оценивать испытания | Иначе правильный ответ можно подобрать после просмотра кандидата | Все 12 findings закрыты, blind re-review PASS (0 Critical/High), исправленная редакция повторно принята Project Owner | Conformance Lead + Security Reviewer | **frozen 2026-09-13** |
 | 3 | OQ-1 | С какими сильнейшими существующими решениями честно сравнивать Native | Слабый соперник даст ложную победу Native | C1 принят как Primary C; C2 — GNAP challenger; ANP — reserve; AGNTCY — bounded infrastructure experiment; manifest OQ1-M1 | Challenger Advocate + Gate Chair | **frozen 2026-09-13** |
 | 4 | OQ-4 | Какие ошибки автоматически запрещают положительный результат | Иначе опасную ошибку можно назвать «средней» и проигнорировать | SBC-01–SBC-10, High severity threshold, attribution, residual-risk и disclosure rules приняты; exact operational slots закрываются в OQ-3B/OQ-5/OQ-6/OQ-8 без права ослабить policy | Security Reviewer + Project Owner | **frozen 2026-09-13** |
-| 5 | OQ-5 | Что означает «практически лучше» и в каких условиях измерять | Без порогов победителя можно выбрать после просмотра цифр | Утвердить primary/secondary endpoints, два cost estimands, environments, margins и SAP | Gate Chair + Project Owner | open |
+| 5 | OQ-5A | Что означает «практически лучше» и в каких условиях измерять | Без порогов победителя можно выбрать после просмотра цифр | RTTSI, necessity-first, 20% boundary, completion gate, challenger roles, guardrails, ceilings и statistics приняты после трёх independent reviews; manifest OQ5A-M1 | Gate Chair + Project Owner | **frozen 2026-09-13** |
+| 5b | OQ-5B | Какие точные N/τ, команды, budgets, cells и schedules делают OQ-5A исполнимой | Без operational freeze проверку нельзя воспроизвести или профинансировать | После OQ-6/OQ-7 и neutral pilot заполнить exact slots и атомарно включить их в OQ-3B | Gate Chair + Project Owner | blocked by OQ-6/OQ-7 |
 | 6 | OQ-6 | Кто независимо проектирует, реализует и проверяет варианты | Одна и та же сторона может неосознанно помочь своему варианту | Назначить роли, зафиксировать exposure и помощь, определить blind adjudication | Gate Chair | open |
 | 7 | OQ-7 | Сколько времени и ресурсов можно потратить | Без границы исследование может стать бесконечным; слишком маленький бюджет испортит доказательства | Задать бюджет по этапам и pause/re-scope rules без удаления hard gates | Project Owner + Gate Chair | open |
 | 8 | OQ-8 | Какие зависимости можно использовать и что можно хранить/публиковать | Ошибка может раскрыть приватные материалы или сделать результат юридически непригодным | Проверить licenses/IP, storage boundaries и отдельный publication checklist | Evidence Custodian + Project Owner | open |
@@ -19,10 +20,11 @@
 
 1. **Завершено:** OQ-2A, OQ-3A и OQ-1 заморожены без проектирования Candidate N/C.
 2. **Завершено:** OQ-4 safety policy заморожена после независимого review; операционные параметры обязаны реализовать её без ослабления.
-3. **Текущий шаг:** закрыть OQ-5 — заранее определить измерения, environments, thresholds и margins понятия «практически лучше».
-4. Закрыть OQ-6–OQ-8, затем полный OQ-3B и только после этого OQ-2B/Candidate design; сформировать полный Charter package.
-5. Провести независимые methodology, security, architecture и fairness reviews.
-6. Провести Expert Advisory Checkpoint и объяснить рекомендацию Project Owner простым языком.
-7. Только после осознанного `proceed` и полного freeze разрешить экспериментальный код.
+3. **Завершено:** OQ-5A measurement policy заморожена; OQ-5B operational values остаются blocked до OQ-6/OQ-7/neutral pilot.
+4. **Текущий шаг:** закрыть OQ-6 — независимые роли, exposure boundaries и blind adjudication.
+5. Закрыть OQ-7/OQ-8, OQ-5B, затем полный OQ-3B и только после этого OQ-2B/Candidate design; сформировать полный Charter package.
+6. Провести независимые methodology, security, architecture и fairness reviews.
+7. Провести Expert Advisory Checkpoint и объяснить рекомендацию Project Owner простым языком.
+8. Только после осознанного `proceed` и полного freeze разрешить экспериментальный код.
 
-OQ-2A, OQ-3A, OQ-1 и OQ-4 frozen. OQ-1 после независимых проверок зафиксировал C1/C2, ANP reserve и ограниченный AGNTCY experiment, не выбрав архитектуру AgentBridge. Exact corpus остаётся OQ-3B; Allocation Matrix — гипотезой до OQ-2B. Charter и любой code сохраняют No Start.
+OQ-2A, OQ-3A, OQ-1, OQ-4 и OQ-5A frozen. OQ-1 после независимых проверок зафиксировал C1/C2, ANP reserve и ограниченный AGNTCY experiment, не выбрав архитектуру AgentBridge. Exact corpus остаётся OQ-3B; Allocation Matrix — гипотезой до OQ-2B. Charter и любой code сохраняют No Start.
