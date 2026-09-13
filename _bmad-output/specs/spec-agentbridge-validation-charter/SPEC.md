@@ -20,6 +20,7 @@ companions:
   - measurement-and-decision.md
   - oq5a-freeze-manifest.md
   - roles-evidence-and-governance.md
+  - oq6a-freeze-manifest.md
   - open-decisions.md
   - review-evaluation-ledger.md
   - ../../planning-artifacts/prds/prd-agent-bridge-sdk-2026-09-12/prd.md
@@ -116,6 +117,6 @@ AgentBridge претендует на самостоятельный, role-neutr
 - **OQ-3B:** Какие exact vectors, datasets, expected outcomes, calibration cases и sealed holdout создать после OQ-4/OQ-5/OQ-8, но до OQ-2B, Candidate design и экспериментального кода?
 - **OQ-4 downstream closure:** Как exact OQ-3B vectors/observers, OQ-5 ceilings, OQ-6 roles и OQ-8 controls операционализируют frozen SBC-01–SBC-10 без ослабления принятой safety policy?
 - **OQ-5B:** Какие exact N/τ, team mix, budgets/costs, cells, schedules, tail operations и absolute bounds заморозить после OQ-6/OQ-7/neutral pilot и до OQ-3B?
-- **OQ-6:** Кто займёт независимые роли и как будет предотвращено взаимное влияние реализаций?
+- **OQ-6B:** Какие реальные identities/controllers/providers/stores и access-control tests обеспечат требуемый I2 после OQ-7/OQ-8?
 - **OQ-7:** Какой бюджет времени, вычислений и инфраструктуры допустим без ослабления hard gates?
 - **OQ-8:** Какие dependency licenses, правила хранения, IP checks и publication boundaries обязательны?
