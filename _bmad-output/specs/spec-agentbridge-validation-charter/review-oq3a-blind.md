@@ -1,6 +1,6 @@
 # Independent blind review — AgentBridge Validation Charter OQ-3A
 
-**Review status:** FAIL / revise before freeze  
+**Review status:** FAIL / revise before freeze
 **Finding count:** Critical 0 · High 8 · Medium 3 · Low 1
 
 ## Scope and information barrier
@@ -13,7 +13,7 @@ The proposal is substantially candidate-neutral: it specifies abstract roles and
 
 ### H-01 — The Outcome Tuple has no total conformance-verdict function and is not a closed algebra
 
-**Severity:** High  
+**Severity:** High
 **Location:** `oracle-and-outcomes.md` §§1–3; `scenario-corpus.md` §4; `experiment-matrix.md` OQ-3A acceptance criteria
 
 The documents define tuple fields, allowed and forbidden sets, and several safety implications, but never define a total function from observations to exactly one cell disposition. They also do not resolve all important cross-field combinations. Examples include `compatibility=incompatible|unknown` with `progress=continue`, a current-attempt `execution=not-started` with a pre-existing operation effect, `authority=non-permit` with non-protected execution, and obligations whose enforcement phase is not the phase represented by the tuple. `disclosures/effects` are called exact sets, but equality versus subset matching and the treatment of pre-existing versus newly caused effects are not stated. The 39 holdouts likewise have no frozen aggregation rule stating how pass, fail, invalid, and inconclusive cells affect the candidate and Gate 1.
@@ -31,7 +31,7 @@ This leaves room for contradictory tuples, selective treatment of invalid cells,
 
 ### H-02 — Candidate defects can be classified as observer invalidity
 
-**Severity:** High  
+**Severity:** High
 **Location:** `observers-and-holdout.md` §§1–4; `oracle-and-outcomes.md` cross-field consistency
 
 Several observer consequences say that missing or ambiguous information produces `invalid`: OBS-01 transcript ambiguity, OBS-02 inability to prove a decision, OBS-08 unavailable trace, and OBS-09 missing provenance. Those conditions can arise because the observer failed, but they can also arise because the candidate failed to emit a required, unambiguous, externally observable result or evidence. The present text does not distinguish the two causes. A candidate could therefore turn a conformance failure into an excluded/invalid run by withholding or confusing mandatory evidence.
@@ -40,7 +40,7 @@ Several observer consequences say that missing or ambiguous information produces
 
 ### H-03 — The 65-cell matrix is a useful skeleton but lacks a closed obligation/failure coverage universe
 
-**Severity:** High  
+**Severity:** High
 **Location:** `scenario-corpus.md` §§2–5; `oracle-and-outcomes.md` §5; PRD SM-5 and §§11.4, 11.7.2
 
 One vector per `VC × P/N/F/A/M` cell cannot establish coverage of all EI falsifiers and PRD safety obligations, and the proposal correctly says additional vectors are required. However, it does not freeze the inventory or equivalence rule that determines what counts as a distinct obligation or failure mechanism. Many cells contain alternatives that one minimum vector cannot cover (for example unknown mandatory **or** collision, subject mutation **or** expiry), while DS-6 omits explicit operators/grammars for several required threat or conditional-hazard classes, including controller/credential/participant/intermediary compromise, collusion limits, enumeration, false-evidence provenance, numeric/Unicode ambiguity, bounded decompression/parsing, and replayable early/fallback behavior when applicable. The EI route table is at whole-EI granularity and therefore cannot prove PRD SM-5's zero silently untested MUST-level obligations.
@@ -49,7 +49,7 @@ One vector per `VC × P/N/F/A/M` cell cannot establish coverage of all EI falsif
 
 ### H-04 — OQ-3B may create exact public cases and expected outcomes after candidate design without a complete information barrier
 
-**Severity:** High  
+**Severity:** High
 **Location:** `scenario-corpus.md` §5; `observers-and-holdout.md` §§6, 8; `experiment-matrix.md` OQ-3 split; PRD §§11.5 and 11.7.2
 
 OQ-3A is required before Candidate N/C design, while OQ-3B is required only after OQ-4/OQ-5/OQ-8 and before code. The texts do not prohibit candidate design from occurring between them, nor do they prevent the OQ-3B public-vector author, Oracle Author, or cross-checker from seeing candidate designs. A person who knows the candidate designs can select exact schedules, boundaries, and allowed sets that favor or disfavor a candidate even while using neutral vocabulary. The holdout rule blocks advocates/implementers from exact cases but does not impose the same barrier on oracle personnel or their communications.
@@ -58,7 +58,7 @@ OQ-3A is required before Candidate N/C design, while OQ-3B is required only afte
 
 ### H-05 — The 39-case holdout has no frozen coverage rationale or decision role
 
-**Severity:** High  
+**Severity:** High
 **Location:** `observers-and-holdout.md` §6; PRD §§11.7.2–11.7.3 and SM-3/SM-7
 
 Three cases per VC guarantee family count but not the preregistered `risk × feature × topology × mode × domain` coverage required by the PRD. “At least one safety/privacy boundary per family” does not control how EI obligations, high-risk operators, topology permutations, or compound interactions are represented. No precision rationale is given for 39, and no frozen rule says whether a non-safety holdout miss fails conformance, narrows a claim, triggers replication, or is interpreted statistically. This permits post-hoc weighting of a favorable or unfavorable draw.
@@ -67,7 +67,7 @@ Three cases per VC guarantee family count but not the preregistered `risk × fea
 
 ### H-06 — Seed selection, privileged access, and contamination handling are not sufficiently manipulation-resistant
 
-**Severity:** High  
+**Severity:** High
 **Location:** `observers-and-holdout.md` §§6–7
 
 The Evidence Custodian performs “one fixed draw,” but the rule does not prevent seed shopping, define verifiable entropy contribution, enumerate technical reroll predicates, or require a witness independent of outcome owners. Oracle Author and cross-checker necessarily learn exact hidden outcomes, yet no role-incompatibility, communication restriction, recusal, or access-compartment rule prevents leakage to advocates/implementers. “Equivalent hint” is undefined. Finally, contamination may invalidate a “cell/run” without a frozen scope rule; after seeing results, this could be used to discard a failed subset or replace it selectively.
@@ -76,7 +76,7 @@ The Evidence Custodian performs “one fixed draw,” but the rule does not prev
 
 ### H-07 — Dual observation does not rule out common-mode false zero, and calibration has no frozen acceptance thresholds
 
-**Severity:** High  
+**Severity:** High
 **Location:** `observers-and-holdout.md` §§1–4; PRD §10.1 and NFR-22
 
 The two required paths may still share the same underlying event source, instrumentation boundary, correlation logic, storage, controller, or failure mode. For example, an authoritative simulator ledger and an “independent” commit counter can both miss an effect if both are fed after the same faulty hook. The catalog also gives only one minimum source for most non-effect safety semantics. Calibration lists excellent test classes but does not define coverage per channel/commit point, detection sensitivity, false-positive/false-negative bounds where measurements are statistical (notably timing/linkability/privacy and sampled resource metrics), required repetitions, or independent approval.
@@ -85,7 +85,7 @@ The two required paths may still share the same underlying event source, instrum
 
 ### H-08 — Candidate-specific applicability can shrink comparative scope asymmetrically
 
-**Severity:** High  
+**Severity:** High
 **Location:** `oracle-and-outcomes.md` Oracle Record `applicability`; `scenario-corpus.md` vector template item 11; PRD FR-99–FR-101
 
 The oracle says the same inclusion/exclusion rule applies to N and C, but the vector template requests an applicability/exclusion rationale “for each candidate.” It does not say what happens when one candidate declares a required vector not applicable. A candidate could avoid a hard case by narrowing its claim while the other candidate is tested, and the remaining results could still be compared outside a common support set.
@@ -94,7 +94,7 @@ The oracle says the same inclusion/exclusion rule applies to N and C, but the ve
 
 ### M-01 — Metamorphic coverage is assigned at EI level but does not exercise several security-critical monotonicities
 
-**Severity:** Medium  
+**Severity:** Medium
 **Location:** `oracle-and-outcomes.md` §§4–5; `scenario-corpus.md` matrix `M01`
 
 The 18 properties cover many important relations, but several EI assignments do not test the cited guarantee. EI-08 has no direct revoke/expiry/policy-change-at-commit transformation; EI-12 lacks a transformation showing compensation is a separately authorized operation and cannot rewrite history; EI-21's MP-02 does not test removal/failure of a claimed-optional or hidden-mandatory dependency; and EI-25 lacks direct observer-removal/non-interference and threat/claim-invalidation transformations. MP-05 does not state whether commit count is lifetime operation count or current-run delta, and MP-14's “below ceiling meaning is preserved” is undefined for parameters whose valid behavior legitimately changes below the maximum.
@@ -103,7 +103,7 @@ The 18 properties cover many important relations, but several EI assignments do 
 
 ### M-02 — The OQ-3A document set lacks atomic versioning, precedence, and change-impact control
 
-**Severity:** Medium  
+**Severity:** Medium
 **Location:** all four OQ-3A proposal documents; `oracle-and-outcomes.md` §§1 and 6
 
 Individual Oracle Records are versioned, but the proposal does not define one immutable OQ-3A set version/digest, normative precedence when the four files disagree, dependency identities for the EI/OQ-4/OQ-5/OQ-8 inputs, or the invalidation scope of changes to grammars, observers, coverage rules, or holdout generation. Versioning only allowed/forbidden sets and metamorphic relations is too narrow: a changed observer completeness rule, operator grammar, applicability predicate, sampling quota, or generator can change the exam just as materially.
@@ -112,7 +112,7 @@ Individual Oracle Records are versioned, but the proposal does not define one im
 
 ### M-03 — `evidence_assurance` is not comparable until its partial order is itself frozen
 
-**Severity:** Medium  
+**Severity:** Medium
 **Location:** `oracle-and-outcomes.md` §2 and cross-field consistency; MP-06, MP-11, MP-13
 
 The field permits an element of an explicitly defined Profile/Binding partial order, but no candidate-neutral minimum properties, comparison rule, incomparable-case rule, or version identity for that order are required in the Oracle Record. If candidates or later profile work define different orders, “assurance cannot increase” is not mechanically decidable and can import candidate-specific semantics after outcomes are known.
@@ -121,7 +121,7 @@ The field permits an element of an explicitly defined Profile/Binding partial or
 
 ### L-01 — “Public corpus” conflicts with the PRD's private/shared-versus-published distinction
 
-**Severity:** Low  
+**Severity:** Low
 **Location:** `scenario-corpus.md` title, classifications, and §3; `observers-and-holdout.md` §§6 and 8
 
 The PRD explicitly distinguishes equally available private Gate 1 materials from artifacts approved for public release. Calling the visible confirmatory set `public` and using `confirmatory-public` can be read as authorizing publication or as imposing public availability before the Project Owner's publication decision.
@@ -149,8 +149,8 @@ The PRD explicitly distinguishes equally available private Gate 1 materials from
 
 This was a bounded independent re-review of the revised OQ-3A documents, the new `atomic-coverage-inventory.md`, and every original finding above. The original information barrier remained in force: no candidate manifest, allocation decision, Candidate N/C design, implementation artifact, private source document, or prior discussion outside this review was consulted.
 
-**Remaining findings:** Critical 0 · High 0.  
-**Disposition of original findings:** Resolved 12 · Partially resolved 0 · Unresolved 0.  
+**Remaining findings:** Critical 0 · High 0.
+**Disposition of original findings:** Resolved 12 · Partially resolved 0 · Unresolved 0.
 **Regression result:** No new Critical or High requirement-level defect found.
 
 ### Per-finding resolution
