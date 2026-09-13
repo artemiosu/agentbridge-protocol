@@ -138,7 +138,8 @@ Gate Chair применяет decision lattice из `measurement-and-decision.md
 | Проверка | Owner | Статус |
 | --- | --- | --- |
 | Ledger и allocation полны | Gate Chair | open |
-| Candidates и версии заморожены | Gate Chair + Challenger/Native Advocates | open |
+| Composition Challenger identities, boundaries и базовые версии выбраны | Gate Chair + Challenger Advocate | **OQ1-M1 frozen 2026-09-13; все independent reviews PASS** |
+| Executable Candidate manifests, dependency closures и implementation pins заморожены до design/code | Gate Chair + Challenger/Native Advocates | open; blocked by OQ-3B/OQ-8 |
 | OQ-3A verdict/inventory/schema/scenario/observer/holdout rules заморожены до Candidate design | Conformance Lead + Security Reviewer | **frozen 2026-09-13; blind review PASS 0 Critical/High** |
 | OQ-3B exact corpus/calibration/sealed holdout заморожены до кода | Conformance Lead + Evidence Custodian | open |
 | Safety и observer model приняты | Security Reviewer | open |
@@ -148,4 +149,4 @@ Gate Chair применяет decision lattice из `measurement-and-decision.md
 | Expert Advisory Record рассмотрен | Project Owner | open |
 | Осознанное разрешение начать код | Project Owner | open |
 
-Charter получает статус `frozen` только после закрытия всех строк. Сейчас все строки `open`.
+Charter получает статус `frozen` только после закрытия всех строк. Сейчас OQ-2A, OQ-3A и OQ-1 закрыты, но остальные обязательные строки сохраняют `draft-no-start`.

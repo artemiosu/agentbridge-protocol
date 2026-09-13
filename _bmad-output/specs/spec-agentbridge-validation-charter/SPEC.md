@@ -14,12 +14,14 @@ companions:
   - scenario-corpus.md
   - observers-and-holdout.md
   - oq3-freeze-manifest.md
+  - oq1-freeze-manifest.md
   - measurement-and-decision.md
   - roles-evidence-and-governance.md
   - open-decisions.md
   - review-evaluation-ledger.md
   - ../../planning-artifacts/prds/prd-agent-bridge-sdk-2026-09-12/prd.md
   - ../../planning-artifacts/research/technical-clean-slate-agentbridge-protocol-archite-2026-09-12/research.md
+  - ../../planning-artifacts/research/technical-agentbridge-oq-1-composition-challenger-2026-09-13/research.md
 sources: []
 ---
 
@@ -39,7 +41,7 @@ AgentBridge претендует на самостоятельный, role-neutr
 
 - **CAP-2 — Сильнейшие честные альтернативы**
   - **intent:** Команда формирует актуальный Composition Challenger Set по заранее установленным правилам поиска и отбора.
-  - **success:** Выбраны одна–три Pareto-недоминируемые, реально разворачиваемые конфигурации с точными версиями, полным glue inventory и обоснованием Primary C.
+  - **success:** Выбран реально развёртываемый Primary C и сохранены только недоминируемые условные альтернативы, для которых вся недостающая реализация считается стоимостью кандидата; версии, границы, glue и основания выбора раскрыты.
 
 - **CAP-3 — Полноценная Native-гипотеза**
   - **intent:** Команда описывает внутренне целостный Native Candidate для всех доказанно общих инвариантов без искусственного ограничения его размера.
@@ -77,6 +79,8 @@ AgentBridge претендует на самостоятельный, role-neutr
 
 - Финальный PRD имеет приоритет; Charter может уточнять процедуру, но не ослаблять FR, NFR, hard gates, No Start или scope.
 - Candidate-neutral Ledger EI-01–EI-25 frozen Project Owner 2026-09-13 после blind review с 0 Critical/High; смысловое изменение автоматически снимает freeze до повторного review и принятия.
+- Composition Challenger identity frozen как OQ1-M1: C1 — Primary C, C2 — GNAP authority challenger, ANP 1.1 — reserve; AGNTCY проверяется отдельным ограниченным инфраструктурным экспериментом, но не становится обязательной runtime dependency.
+- OQ-1 не разрешает проектирование или код: точные executable dependency closures, реализации, public mappings, licenses/SBOM и тестовые задания остаются заблокированы до зависимых решений OQ-3B/OQ-8.
 - Native Core проектируется полноценно; существующие стандарты являются сильнейшими альтернативами и необязательными bridges, а не автоматически обязательными runtime-зависимостями.
 - Описательное сравнение не может окончательно остановить Native-гипотезу. Требуется воспроизводимое executable/model evidence и работающий proof of concept решающих инвариантов.
 - `native` нельзя выбрать раньше полного Gate 1A–1D. Окончательные `profile` или `upstream` требуют независимой реализации выбранной C-семантики.
@@ -105,9 +109,7 @@ AgentBridge претендует на самостоятельный, role-neutr
 
 ## Open Questions
 
-- **OQ-1:** Какие точные версии и конфигурации войдут в Composition Challenger Set после freshness-проверки?
 - **OQ-2B:** Какие требования после freeze Ledger и oracle действительно требуют Native Core, а какие должны остаться в Profile, Binding/Bridge, conformance или более поздних слоях?
-- **OQ-3A:** Какие candidate-neutral Outcome/verdict algebra, atomic coverage inventory, metamorphic properties, scenario/data grammars, observer contracts и holdout-generation rules заморозить до Candidate N/C design?
 - **OQ-3B:** Какие exact vectors, datasets, expected outcomes, calibration cases и sealed holdout создать после OQ-4/OQ-5/OQ-8, но до OQ-2B, Candidate design и экспериментального кода?
 - **OQ-4:** Какие severity rules, Safety Blocking Classes и residual-risk limits утвердить?
 - **OQ-5:** Какие runtimes, bindings, environments, thresholds, confidence и non-inferiority margins использовать?
