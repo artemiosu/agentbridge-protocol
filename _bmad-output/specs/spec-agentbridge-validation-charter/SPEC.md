@@ -9,6 +9,9 @@ companions:
   - requirement-allocation.md
   - candidate-manifests.md
   - experiment-matrix.md
+  - oracle-and-outcomes.md
+  - scenario-corpus.md
+  - observers-and-holdout.md
   - measurement-and-decision.md
   - roles-evidence-and-governance.md
   - open-decisions.md
@@ -102,7 +105,8 @@ AgentBridge претендует на самостоятельный, role-neutr
 
 - **OQ-1:** Какие точные версии и конфигурации войдут в Composition Challenger Set после freshness-проверки?
 - **OQ-2B:** Какие требования после freeze Ledger и oracle действительно требуют Native Core, а какие должны остаться в Profile, Binding/Bridge, conformance или более поздних слоях?
-- **OQ-3:** Какие vectors, datasets, expected outcomes, observers и holdout rules образуют corpus VC-1–VC-13?
+- **OQ-3A:** Какие candidate-neutral Outcome Tuple, metamorphic properties, scenario/data grammars, observer contracts и holdout-generation rules заморозить до Candidate N/C design?
+- **OQ-3B:** Какие exact vectors, datasets, expected outcomes, calibration cases и sealed holdout создать после зависимых OQ-4/OQ-5/OQ-8, но до экспериментального кода?
 - **OQ-4:** Какие severity rules, Safety Blocking Classes и residual-risk limits утвердить?
 - **OQ-5:** Какие runtimes, bindings, environments, thresholds, confidence и non-inferiority margins использовать?
 - **OQ-6:** Кто займёт независимые роли и как будет предотвращено взаимное влияние реализаций?
