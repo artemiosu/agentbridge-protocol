@@ -1,8 +1,8 @@
 # OQ-3 freeze manifest
 
-Manifest version: `OQ3-M1`  
-Freeze authority/date: **Project Owner, 2026-09-13**  
-Current scope: **OQ-3A frozen; OQ-3B open / No Start**  
+Manifest version: `OQ3-M1`
+Freeze authority/date: **Project Owner, 2026-09-13**
+Current scope: **OQ-3A frozen; OQ-3B open / No Start**
 Independent review: **PASS; Critical 0, High 0; 12/12 findings resolved**
 
 ## Frozen OQ-3A identities
