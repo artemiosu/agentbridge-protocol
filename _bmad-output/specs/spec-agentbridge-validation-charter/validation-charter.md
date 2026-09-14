@@ -72,6 +72,8 @@ Gate 1 отвечает на один вопрос:
 
 Результат — `proceed`, `revise-research` или `pause-stop`. Совет не заменяет эксперимент и не отнимает решение у Project Owner.
 
+OQ-7 разделяет две точки: ранний внутренний I1 `A0` после OQ-8 отвечает, стоит ли искать ресурсы на полную проверку; формальный независимый I2 `A1` после OQ-7B-Confirmatory/OQ-5B/OQ-6B-Confirmatory/OQ-3B/OQ-2B даёт мотивированную недирективную гипотезу финансирования Native-эксперимента до кода. Окончательный выбор направления остаётся результатом Gate 1.
+
 ### Gate 1B — Model and try to refute
 
 - Построить coherent models N и C против замороженного oracle.
@@ -148,10 +150,13 @@ Gate Chair применяет decision lattice из `measurement-and-decision.md
 | OQ-5B exact N/τ, teams, budgets, cells и schedules заморожены | Gate Chair + Project Owner | blocked by OQ-6/OQ-7/neutral pilot |
 | OQ-6A role/access/independence policy принята | Governance + Fairness + Security Reviewers; Project Owner | **frozen 2026-09-13** |
 | OQ-6B actual roster и I2 barriers доказаны | Gate Chair + Evidence Custodian | blocked by OQ-7/OQ-8 |
+| OQ-7A budget/feasibility policy принята | Project Owner + Gate Chair | **frozen 2026-09-14; three independent reviews PASS; cash authorization USD 0** |
+| OQ-7B-Pilot exact authorized pilot budget и reserve заморожены | Project Owner + independent budget/governance approver | blocked by OQ-8 |
+| OQ-7B-Confirmatory exact Gate 1 budgets и resource limits заморожены | Project Owner + independent budget/governance approver | blocked by neutral pilot/OQ-5B/OQ-6B |
 | Metrics/SAP/budgets приняты | Gate Chair + Project Owner | open |
 | Independence/genealogy приняты | Gate Chair | open |
 | IP/storage/publication проверены | Evidence Custodian + Project Owner | open |
 | Expert Advisory Record рассмотрен | Project Owner | open |
 | Осознанное разрешение начать код | Project Owner | open |
 
-Charter получает статус `frozen` только после закрытия всех строк. Сейчас OQ-2A, OQ-3A и OQ-1 закрыты, но остальные обязательные строки сохраняют `draft-no-start`.
+Charter получает статус `frozen` только после закрытия всех строк. Сейчас OQ-2A, OQ-3A, OQ-1, OQ-4, OQ-5A, OQ-6A и OQ-7A закрыты, но остальные обязательные строки сохраняют `draft-no-start`.
