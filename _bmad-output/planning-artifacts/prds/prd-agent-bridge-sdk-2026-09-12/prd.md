@@ -1,14 +1,17 @@
 ---
 title: "PRD: AgentBridge"
-status: final
+status: superseded
 created: 2026-09-12
-updated: 2026-09-13
+updated: 2026-09-15
+superseded_by: ../prd-agentbridge-native-architecture-first-2026-09-15/prd.md
 visibility: private-local
 mode: coaching
 entry_point: vision-and-features
 ---
 
 # PRD: AgentBridge
+
+> **Историческая редакция.** 15 сентября 2026 года Project Owner утвердил курс Native Architecture-First. Эта редакция сохраняется для traceability; её outcome-neutral Gate 1 и запрет Architecture superseded. FR-1–FR-95, NFR, EI/SBC и иные явно retained требования перенесены в новую редакцию PRD.
 
 ## 0. Назначение документа
 

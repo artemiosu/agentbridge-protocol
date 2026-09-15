@@ -1,12 +1,15 @@
 ---
 title: AgentBridge Gate 1 Validation Charter
-status: draft-no-start
+status: superseded-retained-baselines
 created: 2026-09-13
-updated: 2026-09-13
+updated: 2026-09-15
+superseded_by: ../spec-agentbridge-architecture-assurance/architecture-assurance-charter.md
 governing_spec: SPEC.md
 ---
 
 # Validation Charter
+
+> **Историческая редакция.** Existential Gate 1 superseded 15 сентября 2026 года. Документ сохраняет доказательную историю и принятые policy baselines, но не определяет дальнейшую развилку проекта.
 
 ## 1. Простое объяснение
 

@@ -1,8 +1,9 @@
 ---
 id: SPEC-agentbridge-validation-charter
-status: draft-no-start
+status: superseded-retained-baselines
 created: 2026-09-13
-updated: 2026-09-13
+updated: 2026-09-15
+superseded_by: ../spec-agentbridge-architecture-assurance/SPEC.md
 companions:
   - validation-charter.md
   - evaluation-ledger.md
@@ -35,7 +36,7 @@ companions:
 sources: []
 ---
 
-> **Канонический контракт.** Этот SPEC и все файлы в `companions:` образуют полный контракт подготовки Gate 1. Пока статус `draft-no-start`, экспериментальный код начинать нельзя.
+> **Исторический Charter.** 15 сентября 2026 года его развилка `native/profile/upstream/stop` superseded решением Project Owner о Native Architecture-First. Замороженные EI/SBC, safety, evidence, independence, IP и publication policies сохраняются как обязательные baselines. Этот Charter больше не управляет направлением проекта и не разрешает старый Candidate experiment/code.
 
 # AgentBridge Gate 1 Validation Charter
 
