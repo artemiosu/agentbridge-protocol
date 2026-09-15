@@ -24,6 +24,9 @@ companions:
   - budget-and-feasibility.md
   - review-budget-and-feasibility.md
   - oq7a-freeze-manifest.md
+  - rights-storage-and-publication.md
+  - review-rights-storage-and-publication.md
+  - oq8a-freeze-manifest.md
   - open-decisions.md
   - review-evaluation-ledger.md
   - ../../planning-artifacts/prds/prd-agent-bridge-sdk-2026-09-12/prd.md
@@ -123,4 +126,5 @@ AgentBridge претендует на самостоятельный, role-neutr
 - **OQ-6B:** Какие реальные identities/controllers/providers/stores и access-control tests обеспечат требуемый I2 после OQ-7/OQ-8?
 - **OQ-7A:** Какой поэтапный бюджет и какие pause/re-scope rules допустимы без ослабления hard gates?
 - **OQ-7B-Pilot / OQ-7B-Confirmatory:** Какие точные лимиты сначала разрешат neutral pilot, а после него — полный Gate 1 вместе с OQ-5B/OQ-6B?
-- **OQ-8:** Какие dependency licenses, правила хранения, IP checks и publication boundaries обязательны?
+- **OQ-8A:** Какие неизменяемые license/IP, storage, disclosure и publication правила обязательны?
+- **OQ-8B-Pilot / OQ-8B-Confirmatory:** Какие exact licenses/terms, agreements, stores, regions, keys, retention и release boundaries действуют сначала для pilot, затем для полного Gate 1?

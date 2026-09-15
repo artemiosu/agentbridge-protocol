@@ -155,8 +155,10 @@ Gate Chair применяет decision lattice из `measurement-and-decision.md
 | OQ-7B-Confirmatory exact Gate 1 budgets и resource limits заморожены | Project Owner + independent budget/governance approver | blocked by neutral pilot/OQ-5B/OQ-6B |
 | Metrics/SAP/budgets приняты | Gate Chair + Project Owner | open |
 | Independence/genealogy приняты | Gate Chair | open |
-| IP/storage/publication проверены | Evidence Custodian + Project Owner | open |
+| OQ-8A rights/storage/disclosure/publication policy принята | Independent License/IP + Governance/Adoption + Security/Privacy Reviewers; Evidence Custodian + Project Owner | **frozen 2026-09-15; three independent reviews PASS** |
+| OQ-8B-Pilot exact rights/stores/agreements заморожены | Evidence Custodian + independent IP/Security reviewers | blocked by OQ-8A |
+| OQ-8B-Confirmatory exact dependency/IP/storage manifest заморожен | Evidence Custodian + independent IP/Security reviewers | blocked by pilot/candidate closure |
 | Expert Advisory Record рассмотрен | Project Owner | open |
 | Осознанное разрешение начать код | Project Owner | open |
 
-Charter получает статус `frozen` только после закрытия всех строк. Сейчас OQ-2A, OQ-3A, OQ-1, OQ-4, OQ-5A, OQ-6A и OQ-7A закрыты, но остальные обязательные строки сохраняют `draft-no-start`.
+Charter получает статус `frozen` только после закрытия всех строк. Сейчас OQ-2A, OQ-3A, OQ-1, OQ-4, OQ-5A, OQ-6A, OQ-7A и OQ-8A закрыты, но OQ-8B и остальные operational строки сохраняют `draft-no-start`.
