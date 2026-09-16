@@ -24,9 +24,11 @@ decision_id: AD-21
 | Data | synthetic-only fixtures; no customer/production/personal/regulatory data | unfilled |
 | Secrets | no production credentials; ephemeral test-secret lifecycle | unfilled |
 | Network | deny-by-default egress; exact allowlist; telemetry/update prohibition | unfilled |
-| Resources | CPU/memory/state/I/O/storage/time/fan-out/retry/amplification ceilings and safe-stop | unfilled |
-| Observers | effect/evidence observer paths, qualification and gap handling | unfilled |
-| Failure | incident, evidence preservation, containment, cleanup and attribution rules | unfilled |
+| Targets and effects | exact endpoints/accounts/namespaces/resources; local/simulated or owner-controlled isolated targets only; effect classes; effect detector; cleanup/rollback and residual-effect verification; zero real customer/third-party/production/financial/legal/public consequential effect | unfilled |
+| External actions | zero spend, purchase, payment, asset/entitlement mutation, contract, registration, company/foundation/marks action, public communication/publication, message to a real third party or other external commitment; any future exception requires separate explicit authority outside this manifest | unfilled |
+| Resources | CPU/memory/state/I/O/storage/network/wait/payload/depth/concurrency/fan-out/retry/amplification ceilings and deterministic safe-stop | unfilled |
+| Observers | for every applicable SBC with Protected Disclosure or Consequential Effect, minimum two independently derived effect/evidence observer paths; qualification, common-mode dependencies, gap/disagreement handling (`invalid`/`inconclusive`, never pass) | unfilled |
+| Failure | incident, evidence preservation, containment, cleanup, rollback/residual-effect verification and attribution rules | unfilled |
 | Reproducibility | commands/config/seeds/logs and immutable result manifest | unfilled |
 | Review | Security/Privacy, Rights/IP and architecture reviewers; conflicts and verdicts | unfilled |
 | Authorization | Project Owner scope approval, digest, timestamp and expiry | unfilled |
@@ -35,4 +37,5 @@ decision_id: AD-21
 
 - `frozen-approved`: executable work разрешено только в указанном scope и сроке.
 - `incomplete/no-use`: запуск запрещён.
-- Любое изменение digest, dependency, data, store, egress, ceiling или scope автоматически возвращает `incomplete/no-use` до повторного review.
+- Egress allowlist, synthetic data и отсутствие production credentials сами по себе не разрешают взаимодействие с реальным target или реальный consequential effect.
+- Любое изменение manifest digest либо любого frozen input, dependency, right/term, environment, data, secret, store, target, endpoint, account, namespace, effect class, external action, egress, ceiling, observer path/common-mode dependency, failure/cleanup rule, scope или expiry автоматически возвращает `incomplete/no-use` до повторного independent review и authorization.

@@ -30,7 +30,7 @@ Blocker обязан назвать нарушенное требование, e
 
 Выход: новый PRD и этот Charter; existential Gate 1 superseded; retained policy baselines сохранены.
 
-### AA-1 — Architecture Constitution
+### AA-1 — Architecture Constitution — complete (PASS 2026-09-16)
 
 Входы:
 
@@ -59,11 +59,16 @@ Exit: 100% обязательных требований распределен�
 - participant/principal/role/audience/context model;
 - capability/version/extension negotiation;
 - interaction modes/correlation/causation;
-- authority/delegation/consent/approval/revoke model;
-- operation/lifecycle/effect/evidence/error state machines;
-- retry/replay/cancel/expiry/partial/compensation/recovery semantics;
+- authority/delegation/consent/approval/revoke model и normative pre/during/post Obligation lifecycle;
+- mechanism-neutral Protected Disclosure relation для exact subject/fields, purpose, audience/observer, necessity, classification, allowed linkability и epoch;
+- operation/lifecycle/protected-disclosure/effect/evidence/error state machines с отдельными disclosure observation/commit и effect commit boundaries;
+- retry/replay/cancel/expiry/partial/recovery semantics, explicit expired deduplication/effect-knowledge state и запрет silently-fresh execution;
+- separately authorized compensation semantics с собственными Operation/Decision Subject/authority/Obligations/limits/commit/outcome;
+- полный shared-limit reserve/commit-consume/release/expire/recover/reconcile/substitution lifecycle;
+- bidirectional/chained/round-trip Bridge transformation semantics, сохраняющие source subject, Presenter, path, provenance, loss и assurance ceiling;
+- typed port, различающий untrusted executor и trusted resource-scoped reference monitor; unknown bypass или full monitor compromise приостанавливает positive effect-safety claim;
 - reverse asynchronous и multi-party semantics;
-- formal/executable verification plan and results for critical transitions.
+- formal/executable verification plan, documentary assertions/falsifiers and derivation results for critical transitions; executable results учитываются только для exact run под `frozen-approved` AD-21 и не являются скрытым разрешением запуска.
 
 AA-2 и AA-3 образуют контролируемую совместную итерацию: AA-2 создаёт модель на явно записанных threat/trust assumptions; AA-3 проверяет и уточняет их. Изменение trust/enforcement boundary автоматически повторно открывает затронутую часть AA-2.
 
@@ -75,17 +80,19 @@ Exit AA-2 становится окончательным только вмес�
 
 - assets, actors, trust/data/enforcement boundaries;
 - misuse/abuse cases, threat/failure trees;
-- проверка authority на effect boundary либо доказуемая связь; если глобальная atomicity невозможна — explicit non-atomic/partial/unknown semantics;
+- проверка authority, exact disclosure purpose/audience/necessity/classification и due Obligations в точке первого observable Protected Disclosure signal, а authority/Decision Subject/Obligations/shared limits — на effect boundary, либо доказуемая атомарная связь с соответствующим observation/commit; если atomicity невозможна — explicit non-atomic/partial/unknown semantics без positive claim;
+- trust/enforcement diagram разделяет untrusted executor и trusted final resource reference monitor, перечисляет все bypass/mutation paths и честно приостанавливает claim при полной compromise final monitor или неизвестном bypass;
 - абстрактные signing/verifier requirements: какие смыслы и поля обязательно покрываются, mutation/ambiguity prohibitions, freshness и verifier obligations; конкретная canonical representation выбирается в AA-4;
 - privacy, metadata, timing, linkability, retention/deletion model;
 - compromise, key rotation, recovery, incident and supply-chain model;
-- prevention/detection/recovery mapping для каждого SBC.
+- prevention/detection/recovery mapping для каждого SBC;
+- минимум два независимо выведенных observer paths для каждого применимого SBC, где возможен Protected Disclosure или Consequential Effect; общий oracle/codebase не доказывает независимость, а отсутствие пути или неразрешённое расхождение даёт `invalid`/`inconclusive`, никогда не `pass`.
 
 Exit: 0 unresolved SBC, Critical/High и mandatory failures в проходящем scope; residual acceptance только для неблокирующих рисков.
 
 ### AA-4 — Wire, Binding and Runtime Architecture
 
-Documentary design разрешён. Executable model/prototype разрешается только после frozen Pre-Prototype Control Manifest: exact scope/classification, artifacts, direct/transitive dependencies, SBOM/licenses, stores/regions/keys/access/retention, synthetic-data rule, deny-by-default egress, secrets prohibition, resource ceilings, observer/sandbox qualification, named owner/reviewers, approval digest и expiry.
+Documentary design разрешён. Executable model/prototype разрешается только после frozen Pre-Prototype Control Manifest: exact scope/classification, artifacts, direct/transitive dependencies, SBOM/licenses, stores/regions/keys/access/retention, synthetic-data rule, deny-by-default egress, secrets prohibition, exact local/simulated or owner-controlled isolated targets/accounts/namespaces/resources, zero real customer/third-party/production/financial/legal/public consequential effect, zero spend/contracts/registrations/publication/real-third-party communication or other external commitment, cleanup/rollback/residual-effect verification, aggregate resource ceilings, minimum two independently derived observers for every applicable protected-disclosure/effect SBC outcome, sandbox qualification, named owner/reviewers, approval digest и expiry. Allowlisted egress, synthetic data и отсутствие production credentials не заменяют target/effect restrictions.
 
 Обязательные результаты:
 
@@ -107,12 +114,13 @@ Exit: shortlist не основан на предпочтении или ран�
 - normative assertion catalog;
 - positive/negative/golden vectors;
 - property/fuzz/differential/concurrency/fault plans;
-- observer qualification и evidence requirements;
+- observer qualification, common-mode analysis и evidence requirements;
+- минимум два independently derived observer paths для каждого применимого SBC с Protected Disclosure или Consequential Effect; отсутствие требуемого пути или unresolved disagreement всегда `invalid`/`inconclusive`, никогда не pass;
 - coverage map к FR/NFR/EI/SBC;
 - scoped claims/expiry/revalidation rules;
 - implementation-independent oracle skeleton.
 
-Exit: неполный observer никогда не даёт pass; критические paths имеют negative/fault coverage; reference implementation не требуется для определения ожидаемого результата. AA-4 benchmarks пересчитываются/отклоняются при conformance divergence.
+Exit: неполный observer никогда не даёт pass; каждый применимый protected-disclosure/effect SBC outcome имеет два independently derived observer paths без необъявленной common-mode зависимости; критические paths имеют negative/fault coverage; reference implementation не требуется для определения ожидаемого результата. AA-4 benchmarks пересчитываются/отклоняются при conformance divergence.
 
 ### AA-6 — Integrated Architecture Baseline
 
