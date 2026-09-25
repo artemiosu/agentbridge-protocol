@@ -1,8 +1,3 @@
-# Private local strategy and source materials
-/.agentbridge-private/
-/ПРОМПТ ДЛЯ CODEX - CHATGPT.md
-/ПОШАГОВЫЙ АЛГОРИТМ ДЕЙСТВИЙ (ОТ $0 ДО ТРИЛЛИОНА).md
-
 # Private BMAD audit/source-extraction records; final planning artifacts may be tracked
 /_bmad-output/**/.memlog.md
 /_bmad-output/**/reconcile-private-*.md
